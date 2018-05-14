@@ -1,0 +1,77 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Registrate</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="splash-logo"></div>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Nombre completo</ion-label>
+            <ion-input type="text" [(ngModel)]="nombre" name="nombre" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Cédula</ion-label>
+            <ion-input type="text" [(ngModel)]="cedula" name="cedula" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Especialidad</ion-label>
+            <ion-input type="text" [(ngModel)]="especialidad" name="especialidad" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Email</ion-label>
+            <ion-input type="email" [(ngModel)]="email" name="email" placeholder="ejemplo@ejemplo.com"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Telefono de 10 digítos</ion-label>
+            <ion-input type="text" [(ngModel)]="telefono" name="telefono" placeholder="ej. 555 555 5555" required="required"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Estado</ion-label>
+            <ion-select [(ngModel)]="estado" name="estado" required="required">
+                <ion-option value="Estado de Mexico">Estado de Mexico</ion-option>
+                <ion-option value="Morelos">Morelos</ion-option>
+                <ion-option value="Chihuahua">Chihuahua</ion-option>
+                <ion-option value="Guerrero">Guerrero</ion-option>
+                <ion-option value="Sinaloa">Sinaloa</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <hr/>
+        <ion-item>
+            <ion-label floating>Municipio</ion-label>
+            <ion-select  [(ngModel)]="municipio" name="municipio" required="required">
+                <ion-option value="Tenango del Valle">Tenango del Valle</ion-option>
+                <ion-option value="Toluca">Toluca</ion-option>
+                <ion-option value="Chihuahua">Chihuahua</ion-option>
+                <ion-option value="Saltillo">Saltillo</ion-option>
+                <ion-option value="Metepec">Metepec</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="contrasena" name="contrasena"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Repetir contraseña</ion-label>
+            <ion-input type="password" [(ngModel)]="repetirContra" name="repetirContra"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Acepto los terminos y condiciones de uso</ion-label>
+            <ion-toggle [(ngModel)]="terminos" checked="false"></ion-toggle>
+        </ion-item>
+        <div padding text-center>
+            <button ion-button color="danger" round (click)="doSignup()">Crear cuenta</button>
+        </div>
+
+    </ion-list>
+
+</ion-content>
